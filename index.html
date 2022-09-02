@@ -16,7 +16,7 @@
     Upload File
 </label>
 <input id="file-upload" type="file"/>
-      <a href="jong.html">Kill rom</a>
+      <a href="index.html">Kill rom</a>
   </div>
 </div>
      <div class="dropdown">
@@ -24,6 +24,8 @@
   <div class="dropdown-content">
 
       <a href="roms.html">Get roms</a>
+      
+      <a onclick="open()">Mario64</a>
 
   </div>
 </div>
@@ -55,6 +57,12 @@
         
         
 
+        function open() {
+            document.querySelector("desmond-player").loadURL("main/mario64.nds")
+            
+        }
+        
+            
             
         
     </script>
