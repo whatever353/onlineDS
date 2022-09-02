@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Schoology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background: black;">
+    
+    <div class="dropdown">
+  <button class="dropbtn">file</button>
+  <div class="dropdown-content">
+
+    <label for="file-upload" class="custom-file-upload">
+    Upload File
+</label>
+<input id="file-upload" type="file"/>
+      <a href="jong.html">Kill rom</a>
+  </div>
+</div>
+     <div class="dropdown">
+  <button class="dropbtn">roms</button>
+  <div class="dropdown-content">
+
+      <a href="roms.html">Get roms</a>
+
+  </div>
+</div>
+       <div class="dropdown">
+  <button class="dropbtn">help</button>
+  <div class="dropdown-content">
+
+      <a>We currently support DS and GBA roms. Report an error using this link.</a>
+
+  </div>
+           
+    
+    <desmond-player></desmond-player>
+    <input type="file" style="position: absolute; transform: translate(-50%, -50%); left: 50%; top: 95%; color: white;"></input>
+  <script src="https://cdn.jsdelivr.net/gh/Unzor/desmond/cdn/desmond.min.js"></script>
+    <script>
+        document.querySelector("input").onchange = function() {
+            document.querySelector("desmond-player").loadURL(URL.createObjectURL(document.querySelector("input").files[0]))
+        }
+      
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector("desmond-player").loadURL("../firmware.nds")
+                document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed;transform: translate(-50%, -50%);width: 40%;left: 50%;top: 30%;height: 40%;";
+
+                document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed;transform: translate(-50%, -50%);width: 40%;left: 50%;top: 70%;height: 40%;";
+            }, 1000)
+        }
+        
+        
+
+            
+        
+    </script>
+</body>
+</html>
